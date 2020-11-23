@@ -1,0 +1,24 @@
+@import "~dom-casts-css-kit/old-tv";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.html {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.body {
+  background: url("../assets/wallpaper.jpg");
+}
+
+.root {
+  position: relative;
+}
+
+@include apply-old-tv-effect("root");

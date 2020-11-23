@@ -1,0 +1,41 @@
+@import "./z-index";
+@import "~dom-casts-css-kit/level";
+@import "~dom-casts-css-kit/bomb";
+
+.level {
+  display: flex;
+  background: url("../../assets/game.jpg") no-repeat;
+  width: 650px;
+  height: 650px;
+}
+
+@include add-level-frames("level", "hard-wall");
+
+.cell {
+  width: 50px;
+  height: 50px;
+}
+
+.outer-wall {
+  background: url("../../assets/outer-wall.jpg");
+}
+
+.hard-wall {
+  background: url("../../assets/hard-wall.jpg");
+}
+
+.soft-wall {
+  position: relative;
+  background: url("../../assets/soft-wall.png");
+  z-index: $zindex-soft-wall;
+}
+
+.bomb {
+  position: absolute;
+  background: url("../../assets/bomb.png");
+  height: 50px;
+  width: 50px;
+  z-index: $zindex-bomb;
+}
+
+@include add-bomb-frames("bomb");
